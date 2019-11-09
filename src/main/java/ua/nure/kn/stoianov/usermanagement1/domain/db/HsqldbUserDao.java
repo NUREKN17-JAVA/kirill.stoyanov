@@ -12,7 +12,7 @@ import java.util.LinkedList;
 
 import ua.nure.kn.stoianov.usermanagement1.domain.User;
 
-public class HsqldbUserDao implements UserDao {
+class HsqldbUserDao implements UserDao {
 	
 	private static final String SELECT_ALL_QUERY = "SELECT id, firstname, lastname, dateofbirth FROM users";
 	private static final String INSERT_QUERY = "INSERT INTO users (firstname, lastname, dateofbirth) VALUES (?, ?, ?)";
