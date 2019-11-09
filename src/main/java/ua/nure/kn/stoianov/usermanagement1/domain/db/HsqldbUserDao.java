@@ -40,7 +40,7 @@ public class HsqldbUserDao implements UserDao {
 			callableStatement.close();
 			statement.close();
 			connection.close();
-			return null;
+			return user;
 		} catch (DatabaseException e) {
 			throw e;
 		} catch (SQLException e) {

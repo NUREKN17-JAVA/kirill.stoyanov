@@ -1,5 +1,17 @@
 package ua.nure.kn.stoianov.usermanagement1.domain.db;
 
-public interface UserDao {
+import java.util.Collection;
 
+import ua.nure.kn.stoianov.usermanagement1.domain.User;
+
+public interface UserDao {
+	User create(User user) throws DatabaseException;
+	
+	void update(User user) throws DatabaseException;
+	
+	void delete(User user) throws DatabaseException;
+	
+	User find(Long id) throws DatabaseException;
+	
+	Collection findAll() throws DatabaseException;
 }
