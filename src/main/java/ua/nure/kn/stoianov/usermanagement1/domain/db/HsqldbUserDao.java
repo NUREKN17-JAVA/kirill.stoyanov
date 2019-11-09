@@ -36,6 +36,10 @@ public class HsqldbUserDao implements UserDao {
 			if (keys.next()) {
 				user.setId(new Long(keys.getLong(1)));
 			}
+			keys.close();
+			callableStatement.close();
+			statement.close();
+			connection.close();
 			return null;
 		} catch (DatabaseException e) {
 			throw e;
