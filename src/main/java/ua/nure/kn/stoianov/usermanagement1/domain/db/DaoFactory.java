@@ -8,7 +8,13 @@ public class DaoFactory {
 	private static final String USER_DAO = "dao.ua.nure.kn.stoianov.usermanagement1.domain.db.UserDao";
 	private final Properties properties;
 	
-	public DaoFactory() {
+	private final static DaoFactory INSTANCE = new DaoFactory(;)
+	
+	public 	static DaoFactory getInstance() {
+		return INSTANCE;
+	}
+			
+	private DaoFactory() {
 		properties = new Properties();
 		try {
 			properties.load(getClass().getClassLoader().getResourceAsStream("settings.properties"));
