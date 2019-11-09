@@ -1,5 +1,6 @@
 package ua.nure.kn.stoianov.usermanagement1.domain.db;
 
+import java.util.Collection;
 import java.util.Date;
 
 import org.dbunit.DatabaseTestCase;
@@ -38,6 +39,17 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
 		
 	}
 
+	public void testFindAll() {
+		try {
+			Collection collection =  dao.findAll();
+			assertNotNull("Collection is null", collection);
+			assertEquals("Collection size.", 2, collection.size());
+		} catch (DatabaseException e) {
+			e.printStackTrace();
+			fail(e.toString());
+		}
+	}
+	
 	@Override
 	protected IDatabaseConnection getConnection() throws Exception {
 		connectionFactory = new ConnectionFactoryImpl();

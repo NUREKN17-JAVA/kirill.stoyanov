@@ -1,0 +1,71 @@
+[33mcommit d80b09a59efb3dbe59449a9751419b54273adeab[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 20:50:51 2019 +0200
+
+    The set of reference data in the xml format was implemented
+
+[33mcommit 4979c15204c09ed62291b3a1b6ea2c62e13f862d[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 20:40:45 2019 +0200
+
+    The method findAll() to search all users in the database has been implemented
+
+[33mcommit 398f050016c89f734ae0f072c5e6f8330807af77[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 20:28:01 2019 +0200
+
+    The database has been created, the table Users has been created
+
+[33mcommit f7af212d24cfeb80cd2ea6b3d2c801ecc7d70dd4[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 20:16:17 2019 +0200
+
+    Closing all resources
+
+[33mcommit 27ba4d2d33981a15f112652bd4246d879f4c33b7[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 20:14:16 2019 +0200
+
+    Realization of function IDENTITY()
+
+[33mcommit 9bbca0ae76fdb60b6358861d929d89b88286bcd0[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 20:04:04 2019 +0200
+
+    Realization of method create() has been done
+
+[33mcommit b4e34c4a251ddb9448af61a72ea671bec6f55467[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 19:43:32 2019 +0200
+
+    The implementation of passing the factory instance to the constructor DAO was written
+
+[33mcommit cc3c9a6c022c99f8017efd2b239248aca005ed6b[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 19:31:08 2019 +0200
+
+    The interface ConnectionFactory has been done, database connection created
+
+[33mcommit e453c4cf4919e2cd77982becce1fe62439a674db[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 19:15:28 2019 +0200
+
+    The test for create() method has been done
+
+[33mcommit 728e7c7943ba05706ba766b7fa5fc3f7a01c65cc[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 18:58:57 2019 +0200
+
+    The database module was written
+
+[33mcommit c70ea2806940ca9deb746cdfab27059f19d29a04[m
+Author: Volodymyr <volodymyr.chychkanov@nure.ua>
+Date:   Sat Nov 9 18:58:23 2019 +0200
+
+    The database module was written
+
+[33mcommit a30245ad0d2d254432aeddd92c0add046917d828[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Kirill Stoyanov <kyrylo.stoianov@nure.ua>
+Date:   Mon Oct 14 14:06:34 2019 +0300
+
+    final project
