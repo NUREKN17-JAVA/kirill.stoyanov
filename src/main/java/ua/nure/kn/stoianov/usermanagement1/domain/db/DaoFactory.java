@@ -8,7 +8,7 @@ public class DaoFactory {
 	private static final String USER_DAO = "dao.ua.nure.kn.stoianov.usermanagement1.domain.db.UserDao";
 	private final Properties properties;
 	
-	private final static DaoFactory INSTANCE = new DaoFactory(;)
+	private final static DaoFactory INSTANCE = new DaoFactory();
 	
 	public 	static DaoFactory getInstance() {
 		return INSTANCE;
