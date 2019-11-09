@@ -5,6 +5,13 @@ import java.util.Collection;
 import ua.nure.kn.stoianov.usermanagement1.domain.User;
 
 public class HsqldbUserDao implements UserDao {
+	
+	private ConnectionFactory connectionFactory;
+	
+	public HsqldbUserDao(ConnectionFactory connectionFactory) {
+		this.connectionFactory = connectionFactory;
+	}
+	
 
 	public User create(User user) throws DatabaseException {
 		// TODO Auto-generated method stub
