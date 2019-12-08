@@ -37,7 +37,7 @@ public class MainFrameTest extends JFCTestCase {
 		finder = new NamedComponentFinder(componentClass, name);
 		finder.setWait(0);
 		Component component = finder.find(mainFrame, 0);
-		//assertNotNull("Could not find component '" + name + "'", component);
+		assertNotNull("Could not find component '" + name + "'", component);
 		return component;
 	}
 	

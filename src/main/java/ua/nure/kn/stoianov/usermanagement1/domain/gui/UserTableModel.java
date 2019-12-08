@@ -10,7 +10,7 @@ import ua.nure.kn.stoianov.usermanagement1.domain.User;
 
 public class UserTableModel extends AbstractTableModel {
 
-	private static final String[] COLUMN_NAMES = {Messages.getString("UserTableModel.id"), Messages.getString("UserTableModel.first_name"), Messages.getString("UserTableModel.last_name")}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+	private static final String[] COLUMN_NAMES = {Messages.getString("MainFrame.id"), Messages.getString("UserTableModel.first_name"), Messages.getString("UserTableModel.last_name")}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	private static final Class[] COLUMN_CLASSES = {Long.class, String.class, String.class};
 	private List users = null;
 	
