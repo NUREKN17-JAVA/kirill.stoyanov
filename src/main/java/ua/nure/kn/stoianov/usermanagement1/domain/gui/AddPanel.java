@@ -18,7 +18,7 @@ public class AddPanel extends JPanel implements ActionListener {
 	private JPanel fieldPanel;
 	private JButton cancelButton;
 	private JButton okButton;
-	private JTextField dayOfBirthField;
+	private JTextField dateOfBirthField;
 	private Component textField;
 	private JTextField lastNameField;
 	private JTextField firstNameField;
@@ -29,6 +29,7 @@ public class AddPanel extends JPanel implements ActionListener {
 	}
 
 	private void initialize() {
+		this.setName("addPanel");
 		this.setLayout(new BorderLayout());
 		this.add(getFieldPanel(), BorderLayout.NORTH);
 		this.add(getButtonPanel(), BorderLayout.SOUTH);
@@ -69,20 +70,20 @@ public class AddPanel extends JPanel implements ActionListener {
 	private JPanel getFieldPanel() {
 		if (fieldPanel == null) {
 			fieldPanel = new JPanel();
-			fieldPanel.setLayout(new GridLayout(3,2));
+			fieldPanel.setLayout(new GridLayout(3, 2));
 			addLabeledField(fieldPanel, "Имя", getFirstNameField());
 			addLabeledField(fieldPanel, "Фамилия", getLastNameField());
-			addLabeledField(fieldPanel, "Дата рождения", getDayOfBirth());
+			addLabeledField(fieldPanel, "Дата рождения", getDateOfBirth());
 		}
 		return fieldPanel;
 	}
 
-	private JTextField getDayOfBirth() {
-		if (dayOfBirthField == null) {
-			dayOfBirthField = new JTextField();
-			dayOfBirthField.setName("dayOfBirthField");
+	private JTextField getDateOfBirth() {
+		if (dateOfBirthField == null) {
+			dateOfBirthField = new JTextField();
+			dateOfBirthField.setName("dateOfBirthField");
 		}
-		return dayOfBirthField;
+		return dateOfBirthField;
 	}
 
 	private JTextField getLastNameField() {
