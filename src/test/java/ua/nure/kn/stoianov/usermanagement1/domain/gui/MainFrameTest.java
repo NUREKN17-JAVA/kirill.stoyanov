@@ -2,6 +2,7 @@ package ua.nure.kn.stoianov.usermanagement1.domain.gui;
 
 import java.awt.Component;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
 
@@ -10,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+import com.mockobjects.dynamic.Mock;
+
 import junit.extensions.jfcunit.JFCTestCase;
 import junit.extensions.jfcunit.JFCTestHelper;
 import junit.extensions.jfcunit.eventdata.MouseEventData;
@@ -17,27 +20,31 @@ import junit.extensions.jfcunit.eventdata.StringEventData;
 import junit.extensions.jfcunit.finder.NamedComponentFinder;
 import ua.nure.kn.stoianov.usermanagement1.domain.db.DaoFactory;
 import ua.nure.kn.stoianov.usermanagement1.domain.db.DaoFactoryImpl;
+import ua.nure.kn.stoianov.usermanagement1.domain.db.MockDaoFactory;
 import ua.nure.kn.stoianov.usermanagement1.domain.db.MockUserDao;
 
 public class MainFrameTest extends JFCTestCase {
 
 	private MainFrame mainFrame;
 	
+	private Mock mockUserDao;
+	
 	protected void setUp() throws Exception {
 		super.setUp();
-		
-		Properties properties = new Properties();
-		properties.setProperty
-				("nure.kn.stoianov.usermanagement1.domain.db.UserDao",
-						MockUserDao.class.getName());
-		properties.setProperty("dao.factory", DaoFactoryImpl.class.getName());
-		DaoFactory.getInstance().init(properties);
-			
-		setHelper(new JFCTestHelper());
 		try {
-			mainFrame = new MainFrame();
-			
-		} catch (Exception e) {	
+		Properties properties = new Properties();
+		
+		DaoFactory.getInstance().init(properties);
+		properties.setProperty("dao.factory", MockDaoFactory.class
+				.getName());
+		DaoFactory.init(properties);
+		mockUserDao = ((MockDaoFactory) DaoFactory.getInstance())
+				.getMockUserDao();
+		mockUserDao.expectAndReturn("findAll", new ArrayList());
+		setHelper(new JFCTestHelper());
+		mainFrame = new MainFrame();
+		
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		mainFrame.setVisible(true);
