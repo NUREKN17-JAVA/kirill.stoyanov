@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ua.nure.kn.stoianov.usermanagement1.domain.User;
 import ua.nure.kn.stoianov.usermanagement1.domain.db.DaoFactory;
 import ua.nure.kn.stoianov.usermanagement1.domain.db.DatabaseException;
 
@@ -42,7 +43,21 @@ public class BrowseServlet extends HttpServlet {
 	}
 
 	private void edit(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String idStr = req.getParameter("id");
+		if (idStr == null || idStr.trim().length() == 0) {
+	           req.setAttribute("error", "Select a user");
+	           req.getRequestDispatcher("/browse.jsp").forward(req, resp);
+	           return;
+	       }
+	       try {
+	           User user = DaoFactory.getInstance().getUserDao().find(new Long(idStr));
+	           req.getSession().setAttribute("user", user);
+	       } catch (Exception e) {
+	           req.setAttribute("error", "Error in the database: " + e.toString());
+	           req.getRequestDispatcher("/browse.jsp").forward(req, resp);
+	           return;
+	       }
+	       req.getRequestDispatcher("/edit").forward(req, resp);
 		
 	}
 
