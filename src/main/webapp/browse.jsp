@@ -2,6 +2,7 @@
 <html>
 <head><title>User management/Browse</title></head>
 <body>
+	<form action="<%=request.getContextPath()%>/browse" method="post">
     <table id=”userTable” border=”1”>
     	<tr>
     		<th></th>
@@ -18,5 +19,10 @@
 	</tr>
 	</c:forEach>
     </table>
+    <input type="submit" name="add" value="Add">
+    <input type="submit" name="edit" value="Edit">
+    <input type="submit" name="delete" value="Delete">
+    <input type="submit" name="details" value="Details">
+    </form>
 </body>
 </html>
