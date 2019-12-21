@@ -29,7 +29,7 @@ public class BrowseServlet extends HttpServlet {
 	           browse(req, resp);
 	       }
 		browse (req, resp);
-		
+	
 	}
 
 	private void details(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -62,7 +62,7 @@ public class BrowseServlet extends HttpServlet {
 	}
 
 	private void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		req.getRequestDispatcher("/add").forward(req, resp);
 		
 	}
 
