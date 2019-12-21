@@ -20,5 +20,6 @@
 	<classpathentry kind="lib" path="lib/standard-1.1.1.jar"/>
 	<classpathentry kind="lib" path="lib/tomcat.jar"/>
 	<classpathentry kind="lib" path="lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="lib/mockrunner-servlet.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
