@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>New</name>
+			<type>2</type>
+			<location>C:/Users/Kirill/eclipse-workspace/New</location>
+		</link>
+	</linkedResources>
 </projectDescription>
