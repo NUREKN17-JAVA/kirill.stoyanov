@@ -28,7 +28,7 @@ public class AddServletTest extends MockServletTestCase {
 	public void testAddEmptyFirstName() {
 		Date date = new Date();
         addRequestParameter("lastName", "Doe");
-        addRequestParameter("date", DateFormat.getDateInstance().format(user.getDateOfBirth()));
+        addRequestParameter("date", DateFormat.getDateInstance().format(date));
         addRequestParameter("okButton", "Ok");
         doPost();
         String errorMessage = (String) getWebMockObjectFactory().getMockRequest().getAttribute("error");
@@ -37,7 +37,7 @@ public class AddServletTest extends MockServletTestCase {
 	public void testAddEmptyLastName() {
         Date date = new Date();
         addRequestParameter("firstName", "John");
-        addRequestParameter("dateOfBirthd", DateFormat.getDateInstance().format(user.getDateOfBirth()));
+        addRequestParameter("dateOfBirthd", DateFormat.getDateInstance().format(date));
         addRequestParameter("okButton", "Ok");
         doPost();
         String errorMessage = (String) getWebMockObjectFactory().getMockRequest().getAttribute("error");
