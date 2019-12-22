@@ -35,7 +35,7 @@ public class SearchAgent extends Agent {
 
 	}
 	
-	private void showUsers(Collection user) {
+	void showUsers(Collection user) {
 		// TODO отобразить найденных пользователей
 	}
 	
