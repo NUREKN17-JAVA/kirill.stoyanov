@@ -2,6 +2,7 @@ package ua.nure.kn.stoianov.usermanagement1.domain.agent;
 
 import java.util.Collection;
 
+import jade.core.AID;
 import jade.core.Agent;
 import ua.nure.kn.stoianov.usermanagement1.domain.db.DaoFactory;
 import ua.nure.kn.stoianov.usermanagement1.domain.db.DatabaseException;
@@ -26,7 +27,7 @@ public class SearchAgent extends Agent {
 			if (users.size() > 0) {
 				showUsers(users);
 			} else {
-				// TODO послать запрос другим агентам
+				addBehaviour(new SearchRequestBehaviour(new AID[] {}, firstName, lastName));
 			}
 		} catch (DatabaseException e) {
 			throw new SearchException(e);
